@@ -19,3 +19,11 @@ def test_division():
 def test_square_root():
     print(c.sqrt(-4))
     assert c.sqrt(-4) == 'Invalid input'
+
+def test_invalid_value():
+    assert c.sum('a','b') == 'Invalid input'
+    assert c.subtract('a', 'b') == 'Invalid input'
+    assert c.multiply('a','b') == 'Invalid input'
+    assert c.divide('a','b') == 'Invalid input'
+    assert c.square('a') == 'Invalid input'
+    assert c.sqrt('a') == 'Invalid input'
