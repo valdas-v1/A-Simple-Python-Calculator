@@ -33,4 +33,4 @@ $ pip install -r requirements.txt
 License
 ----
 
-MIT
+[MIT](LICENSE)
