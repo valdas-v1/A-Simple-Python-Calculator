@@ -2,12 +2,14 @@ import math
 
 
 class Calculator:
+
     '''Calculator class with methods to sum, subtract, multiply, divide square and find square root'''
+
     def sum(self, a, b):
         '''Returns sum of two numeric values'''
 
         try:
-            return float(a) + float(b)  
+            return float(a) + float(b)
         except:
             return 'Invalid input'
 
@@ -15,7 +17,7 @@ class Calculator:
         '''Returns subtraction result of two numeric values'''
 
         try:
-            return float(a) - float(b) 
+            return float(a) - float(b)
         except:
             return 'Invalid input'
 
@@ -23,7 +25,7 @@ class Calculator:
         '''Returns multiplication result of two numeric values'''
 
         try:
-            return float(a) * float(b) 
+            return float(a) * float(b)
         except:
             return 'Invalid input'
 
@@ -31,7 +33,7 @@ class Calculator:
         '''Returns division result of two numeric values'''
 
         try:
-            return float(a) / float(b) 
+            return float(a) / float(b)
         except ZeroDivisionError:
             return 'Can not divide by zero.'
         except:

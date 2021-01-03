@@ -1,12 +1,12 @@
 # Calculator
 A simple python calculator
 Calculator currently supports:
-  - Addition of items and lists
-  - Multiplication of items and lists
+  - Addition, subtraction, division and multiplication
+  - Square and square root
 
 # Upcomming Features!
 
-  - item and list subtraction and division
+  - Trigonometric funcions
 
 ### Tech
 Calculator uses a number of open source projects to work properly:
