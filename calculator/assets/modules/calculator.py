@@ -1,20 +1,23 @@
-class Actions():
-    def add(self, a, b) -> float:
-        return a + b
+import math
 
-    def multiply(self, a, b) -> float:
-        return a * b
+class Calculator():
+    def sum(self, a, b):
+        return a+b
 
+    def subtract(self, a, b):
+        return a-b
 
-class List_actions():
-    def add(self, a) -> float:
-        answer = 0
-        for num in a:
-            answer += num
-        return answer
+    def multiply(self, a, b):
+        return a*b
 
-    def multiply(self, a) -> float:
-        answer = 1
-        for num in a:
-            answer *= num
-        return answer
+    def divide(self, a, b):
+        try:
+            return a/b
+        except ZeroDivisionError:
+            return 'Can not divide by zero.'
+
+    def sqrt(self, a):
+        try:
+            return math.sqrt(a)
+        except:
+            return 'invalid input'
