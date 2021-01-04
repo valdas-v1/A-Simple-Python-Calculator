@@ -1,6 +1,6 @@
 import pytest
 
-from calculator import Calculator
+from calculator.calculator import Calculator
 
 c = Calculator()
 
@@ -22,7 +22,6 @@ def test_division():
 
 
 def test_square_root():
-    print c.sqrt(-4)
     assert c.sqrt(-4) == 'Invalid input'
 
 

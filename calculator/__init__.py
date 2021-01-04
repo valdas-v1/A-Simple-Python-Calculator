@@ -1,1 +1,1 @@
-from calculator.assets.modules.calculator import Calculator
+from .calculator import Calculator
