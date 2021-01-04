@@ -3,7 +3,8 @@ A simple python calculator
 Calculator currently supports:
   - Addition, subtraction, division and multiplication
   - Square and square root
-
+  - Error handling
+  - Invalid input handling
 ### Upcomming Features!
 
   - Trigonometric funcions
