@@ -1,10 +1,20 @@
 import math
 
-
 class Calculator:
     """Calculator class with methods to sum, subtract, multiply, divide square and find square root"""
 
-    def sum(self, a, b):
+    def __init__(self, memory = 0):
+        self.memory = memory
+    
+
+    def reset_memory(self):
+        """
+        Resets the memory back to zero
+        """
+        self.memory = 0
+
+
+    def sum(self, a, b = None):
         """
         Returns sum of two numeric values
 
@@ -15,13 +25,16 @@ class Calculator:
         Returns:
             sum (float): The sum of the provided numbers
         """
+        try: 
+            if b == None:
+                b = self.memory
 
-        try:
-            return float(a) + float(b)
+            self.memory = float(a) + float(b)
+            return self.memory
         except:
             return 'Invalid input'
 
-    def subtract(self, a, b):
+    def subtract(self, a, b = None):
         """
         Returns subtraction result of two numeric
 
@@ -34,11 +47,16 @@ class Calculator:
         """
 
         try:
-            return float(a) - float(b)
+            if b == None:
+                b = a
+                a = self.memory
+
+            self.memory = float(a) - float(b)
+            return self.memory
         except:
             return 'Invalid input'
 
-    def multiply(self, a, b):
+    def multiply(self, a, b = None):
         """
         Returns multiplication result of two numeric values
 
@@ -51,11 +69,15 @@ class Calculator:
         """
 
         try:
-            return float(a) * float(b)
+            if b == None:
+                b = self.memory
+
+            self.memory = float(a) * float(b)
+            return self.memory
         except:
             return 'Invalid input'
 
-    def divide(self, a, b):
+    def divide(self, a, b = None):
         """
         Returns division result of two numeric values
 
@@ -68,13 +90,18 @@ class Calculator:
         """
 
         try:
-            return float(a) / float(b)
+            if b == None:
+                b = a
+                a = self.memory
+
+            self.memory = float(a) / float(b)
+            return self.memory
         except ZeroDivisionError:
             return 'Can not divide by zero.'
         except:
             return 'Invalid input'
 
-    def square(self, a):
+    def square(self, a = None):
         """
         Returns square of provided numeric value
 
@@ -86,11 +113,15 @@ class Calculator:
         """
 
         try:
-            return float(a) ** 2
+            if a == None:
+                a = self.memory
+
+            self.memory = float(a) ** 2
+            return self.memory
         except:
             return 'Invalid input'
 
-    def sqrt(self, a):
+    def sqrt(self, a = None):
         """
         Returns square root of provided numeric value
 
@@ -102,6 +133,10 @@ class Calculator:
         """
 
         try:
-            return math.sqrt(float(a))
+            if a == None:
+                a = self.memory
+
+            self.memory = math.sqrt(float(a))
+            return self.memory
         except:
             return 'Invalid input'
