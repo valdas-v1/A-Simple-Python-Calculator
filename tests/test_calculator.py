@@ -49,13 +49,13 @@ def test_memory():
 
     c.reset_memory()
 
-    assert c.multiply(1,1) == 1
+    assert c.multiply(1, 1) == 1
     assert c.multiply(2) == 2
     assert c.multiply(2) == 4
 
     c.reset_memory
 
-    assert c.divide(20,2) == 10
+    assert c.divide(20, 2) == 10
     assert c.divide(2) == 5
     assert c.divide(5) == 1
 

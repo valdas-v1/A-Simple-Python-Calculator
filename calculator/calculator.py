@@ -1,20 +1,21 @@
 import math
 
+
 class Calculator:
+
     """Calculator class with methods to sum, subtract, multiply, divide square and find square root"""
 
-    def __init__(self, memory = 0):
+    def __init__(self, memory=0):
         self.memory = memory
-    
 
     def reset_memory(self):
         """
         Resets the memory back to zero
         """
+
         self.memory = 0
 
-
-    def sum(self, a, b = None):
+    def sum(self, a, b=None):
         """
         Returns sum of two numeric values
 
@@ -25,7 +26,8 @@ class Calculator:
         Returns:
             sum (float): The sum of the provided numbers
         """
-        try: 
+
+        try:
             if b == None:
                 b = self.memory
 
@@ -34,7 +36,7 @@ class Calculator:
         except:
             return 'Invalid input'
 
-    def subtract(self, a, b = None):
+    def subtract(self, a, b=None):
         """
         Returns subtraction result of two numeric
 
@@ -56,7 +58,7 @@ class Calculator:
         except:
             return 'Invalid input'
 
-    def multiply(self, a, b = None):
+    def multiply(self, a, b=None):
         """
         Returns multiplication result of two numeric values
 
@@ -77,7 +79,7 @@ class Calculator:
         except:
             return 'Invalid input'
 
-    def divide(self, a, b = None):
+    def divide(self, a, b=None):
         """
         Returns division result of two numeric values
 
@@ -101,7 +103,7 @@ class Calculator:
         except:
             return 'Invalid input'
 
-    def square(self, a = None):
+    def square(self, a=None):
         """
         Returns square of provided numeric value
 
@@ -121,7 +123,7 @@ class Calculator:
         except:
             return 'Invalid input'
 
-    def sqrt(self, a = None):
+    def sqrt(self, a=None):
         """
         Returns square root of provided numeric value
 
