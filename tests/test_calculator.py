@@ -53,19 +53,19 @@ def test_memory():
     assert c.multiply(2) == 2
     assert c.multiply(2) == 4
 
-    c.reset_memory
+    c.reset_memory()
 
     assert c.divide(20, 2) == 10
     assert c.divide(2) == 5
     assert c.divide(5) == 1
 
-    c.reset_memory
+    c.reset_memory()
 
     assert c.square(2) == 4
     assert c.square() == 16
     assert c.square() == 256
 
-    c.reset_memory
+    c.reset_memory()
 
     assert c.sqrt(256) == 16
     assert c.sqrt() == 4
